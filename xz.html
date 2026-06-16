@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>徐州市绿地景观格局统计分析</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Microsoft YaHei",sans-serif;
+    background:#f4f7f4;
+    color:#333;
+}
+
+.header{
+    background:linear-gradient(135deg,#2E7D32,#4CAF50);
+    color:white;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.header p{
+    font-size:15px;
+    opacity:.9;
+}
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    padding:25px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.value{
+    font-size:32px;
+    font-weight:bold;
+    color:#2E7D32;
+}
+
+.en{
+    margin-top:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.cn{
+    color:#666;
+    margin-top:4px;
+    font-size:14px;
+}
+
+.section{
+    margin-top:30px;
+}
+
+.section-title{
+    font-size:22px;
+    color:#2E7D32;
+    margin-bottom:15px;
+    border-left:5px solid #4CAF50;
+    padding-left:10px;
+}
+
+.text-box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    line-height:1.9;
+}
+
+.table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.table th{
+    background:#4CAF50;
+    color:white;
+    padding:12px;
+}
+
+.table td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+.footer{
+    margin-top:30px;
+    text-align:center;
+    color:#888;
+    padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>
+徐州市绿地景观格局与夏季避暑空间分析
+</h1>
+
+<p>
+Landscape Pattern and Summer Cooling Space Analysis of Xuzhou
+</p>
+
+</div>
+
+<div class="container">
+
+<!-- 指标 -->
+
+<div class="grid">
+
+<div class="card">
+<div class="value">276,794</div>
+<div class="en">NP</div>
+<div class="cn">绿地斑块数量<br>Number of Patches</div>
+</div>
+
+<div class="card">
+<div class="value">826,920.09 ha</div>
+<div class="en">CA</div>
+<div class="cn">绿地总面积<br>Class Area</div>
+</div>
+
+<div class="card">
+<div class="value">8.65%</div>
+<div class="en">LPI</div>
+<div class="cn">最大斑块指数<br>Largest Patch Index</div>
+</div>
+
+<div class="card">
+<div class="value">2.99 ha</div>
+<div class="en">MPS</div>
+<div class="cn">平均斑块面积<br>Mean Patch Size</div>
+</div>
+
+<div class="card">
+<div class="value">2458.2</div>
+<div class="en">PD</div>
+<div class="cn">斑块密度<br>Patch Density</div>
+</div>
+
+<div class="card">
+<div class="value">2025</div>
+<div class="en">Study Period</div>
+<div class="cn">研究时段<br>2025年6-9月</div>
+</div>
+
+</div>
+
+<!-- 指标解释 -->
+
+<div class="section">
+
+<div class="section-title">
+景观格局指标说明
+</div>
+
+<div class="text-box">
+
+<table class="table">
+
+<tr>
+<th>指标</th>
+<th>中文名称</th>
+<th>生态学意义</th>
+</tr>
+
+<tr>
+<td>NP</td>
+<td>绿地斑块数量</td>
+<td>反映绿地破碎化程度</td>
+</tr>
+
+<tr>
+<td>CA</td>
+<td>绿地总面积</td>
+<td>反映绿地资源总量</td>
+</tr>
+
+<tr>
+<td>LPI</td>
+<td>最大斑块指数</td>
+<td>反映大型绿地的主导程度</td>
+</tr>
+
+<tr>
+<td>MPS</td>
+<td>平均斑块面积</td>
+<td>反映绿地平均规模</td>
+</tr>
+
+<tr>
+<td>PD</td>
+<td>斑块密度</td>
+<td>反映景观空间离散程度</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- 分析结果 -->
+
+<div class="section">
+
+<div class="section-title">
+分析结果
+</div>
+
+<div class="text-box">
+
+<p>
+基于2025年6月至9月Sentinel-2遥感影像提取徐州市绿地信息，
+共识别绿地斑块276,794个，
+绿地总面积826,920.09公顷，
+最大斑块面积71,493.09公顷，
+最大斑块指数（LPI）为8.65%。
+</p>
+
+<br>
+
+<p>
+研究结果表明，
+徐州市绿地资源总量较大，
+但绿地斑块数量众多，
+平均斑块面积仅为2.99公顷，
+说明绿地景观存在一定程度的破碎化现象。
+</p>
+
+<br>
+
+<p>
+大型连续绿地主要分布于云龙湖、
+潘安湖及城市外围生态空间，
+对缓解城市热岛效应、
+改善区域生态环境和提供夏季避暑空间具有重要作用。
+</p>
+
+</div>
+
+</div>
+
+<!-- 避暑区说明 -->
+
+<div class="section">
+
+<div class="section-title">
+避暑等级划分
+</div>
+
+<div class="text-box">
+
+<table class="table">
+
+<tr>
+<th>等级</th>
+<th>名称</th>
+<th>含义</th>
+</tr>
+
+<tr>
+<td>Ⅰ级</td>
+<td>热岛核心区</td>
+<td>高温暴露区域</td>
+</tr>
+
+<tr>
+<td>Ⅱ级</td>
+<td>热环境缓冲区</td>
+<td>具有一定降温能力</td>
+</tr>
+
+<tr>
+<td>Ⅲ级</td>
+<td>舒适绿地区</td>
+<td>生态环境较好</td>
+</tr>
+
+<tr>
+<td>Ⅳ级</td>
+<td>优质避暑区</td>
+<td>高植被覆盖、低温区域</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+徐州市绿地景观格局与夏季避暑空间分析 WebGIS平台<br>
+Google Earth Engine · ArcGIS Pro · GeoScene Online
+
+</div>
+
+</div>
+
+</body>
+</html>
